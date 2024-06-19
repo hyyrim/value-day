@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './reset.css';
 
 const rootElement = document.getElementById('root') as HTMLElement;
 
@@ -11,7 +12,7 @@ if (rootElement) {
     root.render(
         <React.StrictMode>
             <App />
-        </React.StrictMode>
+        </React.StrictMode>,
     );
 }
 
