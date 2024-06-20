@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
-export const RankingResult = () => {
+interface IProps {
+    handleShowResults: () => void;
+}
+
+export const RankingResult = (props: IProps) => {
+    const { handleShowResults } = props;
+
     return (
         <Container>
-            <Button>reset</Button>
-            <Button>결과보기</Button>
+            <Button onClick={handleShowResults}>결과보기</Button>
         </Container>
     );
 };
@@ -14,6 +19,7 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
+    width: 420px;
     font-size: 16px;
     padding: 10px 20px;
     margin-left: 12px;
