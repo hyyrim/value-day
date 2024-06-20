@@ -4,7 +4,7 @@ interface IProps {
     handleShowResults: () => void;
 }
 
-export const RankingResult = (props: IProps) => {
+export const ResultButton = (props: IProps) => {
     const { handleShowResults } = props;
 
     return (

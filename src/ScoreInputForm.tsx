@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TeamInfo } from './App';
+import { MAX_NUMBER, MIN_NUMBER, TeamInfo } from './App';
 
 interface IProps {
     addInput: () => void;
@@ -26,7 +26,9 @@ export const ScoreInputForm = (props: IProps) => {
                     </div>
                     <div>
                         <Input
-                            type="numeric"
+                            type="text"
+                            pattern={`₩d`}
+                            maxLength={3}
                             value={team.score}
                             onChange={(e) => setTeamScore(index, Number(e.target.value))}
                         />
@@ -56,6 +58,7 @@ const InputWrapper = styled.div`
 `;
 
 const Input = styled.input`
+    width: 180px;
     padding: 10px;
     font-size: 16px;
     text-align: right;

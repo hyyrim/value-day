@@ -1,14 +1,12 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
-const MIN_NUMBER = 1;
-const MAX_NUMBER = 999;
+interface IProps {
+    randomNumber: number;
+    generateRandomNumber: () => void;
+}
 
-export const RandomNumberPicker = () => {
-    const [randomNumber, setRandomNumber] = useState<number>(0);
-    const generateRandomNumber = () => {
-        setRandomNumber(Math.floor(Math.random() * MAX_NUMBER) + MIN_NUMBER);
-    };
+export const RandomNumberPicker = (props: IProps) => {
+    const { randomNumber, generateRandomNumber } = props;
 
     return (
         <Container>
@@ -37,6 +35,6 @@ const Button = styled.button`
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
-    background-color: #df0809;
-    color: #fff;
+    background-color: #eee;
+    color: #df0011;
 `;
