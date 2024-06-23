@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MAX_NUMBER, MIN_NUMBER, TeamInfo } from './App';
+import { TeamInfo } from './App';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquarePlus } from '@fortawesome/free-solid-svg-icons';
 
 interface IProps {
     addInput: () => void;
     setTeamName: (idx: number, value: string) => void;
-    setTeamScore: (idx: number, value: number) => void;
+    setTeamScore: (idx: number, value: string) => void;
     scores: TeamInfo[];
 }
 
@@ -30,14 +32,14 @@ export const ScoreInputForm = (props: IProps) => {
                             pattern={`₩d`}
                             maxLength={3}
                             value={team.score}
-                            onChange={(e) => setTeamScore(index, Number(e.target.value))}
+                            onChange={(e) => setTeamScore(index, e.target.value)}
                         />
                         <span>점</span>
                     </div>
                 </InputWrapper>
             ))}
             <Button onClick={addInput}>
-                <span>+</span>
+                <FontAwesomeIcon icon={faSquarePlus} />
             </Button>
         </Container>
     );
@@ -65,20 +67,14 @@ const Input = styled.input`
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 4px;
+    &:focus {
+        background-color: #222;
+    }
 `;
 
 const Button = styled.button`
-    padding: 10px 20px;
-    border: 1px solid #ddd;
     width: 50px;
     height: 50px;
-    border-radius: 100%;
     font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    span {
-        display: block;
-    }
+    font-size: 26px;
 `;
