@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/value-day/static/css/main.75b7176e.css",
+    "main.js": "/value-day/static/js/main.13973c98.js",
+    "static/js/453.baa3d805.chunk.js": "/value-day/static/js/453.baa3d805.chunk.js",
+    "static/media/digital-7.ttf": "/value-day/static/media/digital-7.93911ab167c943140756.ttf",
+    "index.html": "/value-day/index.html",
+    "main.75b7176e.css.map": "/value-day/static/css/main.75b7176e.css.map",
+    "main.13973c98.js.map": "/value-day/static/js/main.13973c98.js.map",
+    "453.baa3d805.chunk.js.map": "/value-day/static/js/453.baa3d805.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75b7176e.css",
+    "static/js/main.13973c98.js"
+  ]
+}
