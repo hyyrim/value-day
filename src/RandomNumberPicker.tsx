@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { faRotate, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faRotate } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
