@@ -1,11 +1,15 @@
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './App.css';
 import { RandomNumberPicker } from './RandomNumberPicker';
 import { ScoreInputForm } from './ScoreInputForm';
 import { ResultButton } from './ResultButton';
-import React, { useState } from 'react';
+
 import { Modal } from './Modal';
 import { ResultList } from './ResultList';
-import styled from 'styled-components';
+
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 export interface TeamInfo {
     name: string;
@@ -132,7 +136,10 @@ function App() {
                     </Modal>
                 )}
             </Container>
-            <span>온라인프론트개발팀</span>
+            <Mark>
+                <FontAwesomeIcon icon={faHouse} />
+                <span>온라인프론트개발팀</span>
+            </Mark>
         </div>
     );
 }
@@ -145,4 +152,15 @@ const Container = styled.div`
     height: 100vh;
     margin: 0 auto;
     background: #333;
+    border-radius: 8px;
+`;
+
+const Mark = styled.div`
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    span {
+        margin-left: 4px;
+    }
 `;
